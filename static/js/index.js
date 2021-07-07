@@ -13,7 +13,7 @@ exports.postAceInit = function(hook, context) {
     /* Event: User clicks editbar button */
     $('.hyperlink-icon').on('click',function() {
         $('.hyperlink-dialog').toggleClass('popup-show');
-        $('.hyperlink-dialog').css('left', $('.hyperlink-icon').offset().left - 12);
+        $('.hyperlink-dialog').css('right', $('.hyperlink-icon').offset().right - 12);
     });
     /* Event: User creates new hyperlink */
     $('.hyperlink-save').on('click',function() {
