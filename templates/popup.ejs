@@ -1,19 +1,37 @@
-<div class="popup acl-write hyperlink-dialog popup toolbar-popup">
+<div class="popup acl-write hyperlink-dialog toolbar-popup popup">
   <div class="hyperlink-container popup-content">
-    <input type="text" class="hyperlink-url" placeholder="http://..."/>
-    <button type="button" class="btn btn-primary hyperlink-save" data-l10n-id="ep_embedded_hyperlinks.popup.ok">Ok</button>
+    <div class="content-wrap">
+      <div class="input-wrap">
+        <label data-l10n-id="ep_embedded_hyperlinks.popup.lable.link_text">Link text</label>
+        <input type="text" class="input hyperlink-text"/>
+      </div>
+      <div class="input-wrap">
+        <label data-l10n-id="ep_embedded_hyperlinks.popup.lable.link_address">Link address</label>
+        <input type="text" class="input hyperlink-url" placeholder="http://..."/>
+      </div>
+      <button type="button" class="btn btn-primary hyperlink-save" data-l10n-id="ep_embedded_hyperlinks.popup.ok">Ok</button>
+      <button type="button" class="btn btn-primary btn-red hyperlink-remove" data-l10n-id="ep_embedded_hyperlinks.popup.remove">Remove link</button>
+    </div>
   </div>
 </div>
 
 <style>
-  .hyperlink-dialog {
-    max-width: 300px;
+  .content-wrap {
+    width: 100%;
   }
-  .hyperlink-container {
-    display: flex;
+  .input-wrap {
+    width: 100%;
+    margin-bottom: 10px;
   }
-  .hyperlink-url {
-    margin: 0 5px 0 0 !important;
+  .input {
+    display: inline-block;
+    clear: both;
+    width: 100%;
+  }
+  .hyperlink-dialog.popup {
+    left: 50%;
+    right: 50%;
+    bottom: auto;
   }
 
 </style>
